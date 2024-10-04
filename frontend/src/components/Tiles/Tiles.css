@@ -1,18 +1,27 @@
-body {
+.page-background {
     background-image: url('../../assets/bg.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-}
-.tile-container {
+    min-height: 100vh; /* Make sure it covers the full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tile-container {
     display: flex;
     justify-content: space-between;
-    margin: 280px;
-  }
-  
-  .tile {
+    margin: 50px auto; /* Adjust for responsive centering */
+    padding: 20px;
+    max-width: 1200px; /* Set max-width for better layout control */
+    gap: 150px; 
+    flex-wrap: wrap; /* Make the tiles wrap on smaller screens */
+}
+
+.tile {
     width: 30%;
-    height: 100px;
+    min-width: 250px; /* Ensures tiles don't become too small */
+    height: 150px;
     padding: 40px;
     text-align: center;
     border: 2px solid #ddd;
@@ -21,18 +30,33 @@ body {
     text-decoration: none;
     color: white;
     transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-  
-  .tile:hover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tile:hover {
     color: white;
     transform: scale(1.05); 
-  }
-  
-  .tile-content h2 {
+}
+
+.tile-content h2 {
     margin-bottom: 15px;
     font-size: 24px;
-  }
-  
-  .tile-content p {
+}
+
+.tile-content p {
     font-size: 16px;
-  }
+}
+
+@media (max-width: 768px) {
+    .tile-container {
+        flex-direction: column; /* Stack tiles vertically on smaller screens */
+        align-items: center;
+    }
+
+    .tile {
+        width: 80%; /* Make tiles take up more space on mobile */
+        margin-bottom: 20px; /* Add space between tiles */
+    }
+}

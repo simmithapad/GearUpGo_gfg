@@ -1,10 +1,9 @@
-
 .header{
     height: 85vw;
     margin: 00px;
-    background: url('C:\Users\Anshika Singh\OneDrive\Desktop\New folder\GearUpGo_gfg\frontend\public\header.jpg') no-repeat;
+    background: url('../../../public/images/header.jpg') no-repeat;
     background-size: contain;
-    position: relavtive;
+    position: relative;
 }
 .header-contents{
     position: absolute;
