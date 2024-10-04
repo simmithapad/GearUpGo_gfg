@@ -1,14 +1,19 @@
+body {
+    background-image: url('../../assets/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .tile-container {
     display: flex;
     justify-content: space-between;
-    margin: 230px;
+    margin: 280px;
   }
   
   .tile {
-    width: 50%;
-    height: 300px;
+    width: 30%;
+    height: 100px;
     padding: 40px;
-    background-image: url(../../assets/dailysports.jpg);
     text-align: center;
     border: 2px solid #ddd;
     border-radius: 10px;
@@ -19,9 +24,8 @@
   }
   
   .tile:hover {
-    background-color: #18bc9c; /* Change background color on hover */
     color: white;
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    transform: scale(1.05); 
   }
   
   .tile-content h2 {
@@ -32,4 +36,3 @@
   .tile-content p {
     font-size: 16px;
   }
-  
